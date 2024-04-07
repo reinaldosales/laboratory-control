@@ -1,4 +1,4 @@
-using LaboratoryControl.BlazorApp.Data;
+using LaboratoryControl.Infra.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 

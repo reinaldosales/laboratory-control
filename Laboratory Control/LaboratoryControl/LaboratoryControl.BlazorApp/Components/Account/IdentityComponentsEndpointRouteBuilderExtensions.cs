@@ -1,6 +1,6 @@
 using LaboratoryControl.BlazorApp.Components.Account.Pages;
 using LaboratoryControl.BlazorApp.Components.Account.Pages.Manage;
-using LaboratoryControl.BlazorApp.Data;
+using LaboratoryControl.Infra.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;

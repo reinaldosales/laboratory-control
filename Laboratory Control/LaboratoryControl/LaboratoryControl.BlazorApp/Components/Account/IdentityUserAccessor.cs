@@ -1,4 +1,4 @@
-using LaboratoryControl.BlazorApp.Data;
+using LaboratoryControl.Infra.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace LaboratoryControl.BlazorApp.Components.Account
