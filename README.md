@@ -6,6 +6,6 @@ Repositório destinada à cadeira de Projeto Integrador III.
 
 # CLI necessário
 
-## dotnet ef migrations add Initial --project LaboratoryControl.Infra.Data -s LaboratoryControl.BlazorApp -c ApplicationDbContext --verbose
+dotnet ef migrations add Initial --project LaboratoryControl.Infra.Data -s LaboratoryControl.BlazorApp -c ApplicationDbContext --verbose
 
-## dotnet ef database update Initial --project LaboratoryControl.Infra.Data -s LaboratoryControl.BlazorApp -c ApplicationDbContext --verbose
+dotnet ef database update Initial --project LaboratoryControl.Infra.Data -s LaboratoryControl.BlazorApp -c ApplicationDbContext --verbose
