@@ -3,7 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratoryControl.Domain", "LaboratoryControl.Domain\LaboratoryControl.Domain.csproj", "{D4D611A0-4566-4780-88E5-F662240D0A4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratoryControl.Application", "LaboratoryControl.Application\LaboratoryControl.Application.csproj", "{E0BC81D4-1DDC-4F3A-8194-25E3639036A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratoryControl.Infra.Data", "LaboratoryControl.Infra.Data\LaboratoryControl.Infra.Data.csproj", "{13A279BA-F260-44BF-97AF-4344373670DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratoryControl.Infra.IoC", "LaboratoryControl.Infra.IoC\LaboratoryControl.Infra.IoC.csproj", "{EFA77C6C-6F0F-4EDC-87AE-BFC604751273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratyControl.BlazorApp", "LaboratyControl.BlazorApp\LaboratyControl.BlazorApp\LaboratyControl.BlazorApp.csproj", "{EC3CBEED-7F66-4ACF-BB53-36676F978022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratyControl.BlazorApp.Client", "LaboratyControl.BlazorApp\LaboratyControl.BlazorApp.Client\LaboratyControl.BlazorApp.Client.csproj", "{30DB8D3B-DF36-4A48-B671-AB9D2DFE7DAA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4D611A0-4566-4780-88E5-F662240D0A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D611A0-4566-4780-88E5-F662240D0A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D611A0-4566-4780-88E5-F662240D0A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D611A0-4566-4780-88E5-F662240D0A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BC81D4-1DDC-4F3A-8194-25E3639036A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0BC81D4-1DDC-4F3A-8194-25E3639036A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BC81D4-1DDC-4F3A-8194-25E3639036A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0BC81D4-1DDC-4F3A-8194-25E3639036A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A279BA-F260-44BF-97AF-4344373670DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A279BA-F260-44BF-97AF-4344373670DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A279BA-F260-44BF-97AF-4344373670DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A279BA-F260-44BF-97AF-4344373670DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA77C6C-6F0F-4EDC-87AE-BFC604751273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA77C6C-6F0F-4EDC-87AE-BFC604751273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA77C6C-6F0F-4EDC-87AE-BFC604751273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA77C6C-6F0F-4EDC-87AE-BFC604751273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3CBEED-7F66-4ACF-BB53-36676F978022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3CBEED-7F66-4ACF-BB53-36676F978022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3CBEED-7F66-4ACF-BB53-36676F978022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3CBEED-7F66-4ACF-BB53-36676F978022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DB8D3B-DF36-4A48-B671-AB9D2DFE7DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DB8D3B-DF36-4A48-B671-AB9D2DFE7DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DB8D3B-DF36-4A48-B671-AB9D2DFE7DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DB8D3B-DF36-4A48-B671-AB9D2DFE7DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
