@@ -14,4 +14,5 @@ public interface IClassroomRepository
     Task Delete(Classroom classroom);
     Task Update(Classroom classroom);
     Task<Classroom?> GetById(int id);
+    IQueryable<Classroom> GetAllToIndex();
 }

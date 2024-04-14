@@ -9,16 +9,8 @@ namespace LaboratoryControl.Domain.Entities;
 
 public class RoomScheduling : EntityBase
 {
-    public RoomScheduling(
-        int id,
-        DateTime createdAt,
-        DateTime updatedAt,
-        DateTime deletedAt,
-        Classroom classroom,
-        DateTime schedulingDate) : base(id, createdAt, updatedAt, deletedAt)
+    public RoomScheduling(int id, DateTime createdAt, DateTime updatedAt, DateTime? deletedAt) : base(id, createdAt, updatedAt, deletedAt)
     {
-        Classroom = classroom;
-        SchedulingDate = schedulingDate;
     }
 
     public Classroom Classroom { get; private set; }

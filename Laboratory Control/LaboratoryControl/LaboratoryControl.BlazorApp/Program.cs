@@ -25,6 +25,8 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddInfraestructure(builder.Configuration);
 
+builder.Services.AddQuickGridEntityFrameworkAdapter();
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)

@@ -1,0 +1,56 @@
+﻿@page "/classroom/create"
+@inject IClassroomService classroomService
+@inject NavigationManager navigationManager
+
+<PageTitle> Adicionar nova sala </PageTitle>
+
+<h3>Adicionar uma nova sala</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="@classroomCreateModel" OnValidSubmit="CreateClassroom" FormName="CreateClassroom" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+            <div class="mb-3">
+                <label for="Name" class="form-label"> Nome da sala </label>
+                <InputText id="name" @bind-Value="classroomCreateModel.Name" class="form-control" />
+                <ValidationMessage For="() => classroomCreateModel.Name" class="text-danger" />
+            </div>
+            <button type="submit" class="btn btn-primary"> Adicionar sala </button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+
+    [SupplyParameterFromForm]
+    public ClassroomCreateModel classroomCreateModel { get; set; } = new();
+    private EditContext context;
+
+    protected override void OnInitialized()
+    {
+        context = new EditContext(classroomCreateModel);
+        base.OnInitializedAsync();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+            context.Validate();
+    }
+
+    public class ClassroomCreateModel
+    {
+        [Required(ErrorMessage = "Campo obrigatório")]
+        public string Name { get; set; }
+    }
+
+    public async Task CreateClassroom()
+    {
+        Classroom classroom = new(DateTime.Now, DateTime.Now, null, classroomCreateModel.Name);
+
+        await classroomService.Add(classroom);
+
+        navigationManager.NavigateTo("classroom");
+    }
+}

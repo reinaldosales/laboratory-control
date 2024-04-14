@@ -1,0 +1,28 @@
+﻿@page "/classroom"
+@inject IClassroomService classroomService
+
+<PageTitle>Sala de aula</PageTitle>
+
+<h3>Salas de aula</h3>
+
+<p>
+    <a href="classroom/create"> Adicionar sala </a>
+</p>
+
+<QuickGrid Class="table" Items="classroomService.GetAllToIndex()">
+    <PropertyColumn Title="Identificador" Property="classroom => classroom.Id" Sortable="true" />
+    <PropertyColumn Title="Nome" Property="classroom => classroom.Name" Sortable="true" />
+    <PropertyColumn Title="Data de criação" Property="classroom => classroom.CreatedAt" Sortable="true" />
+    <PropertyColumn Title="Data de atualização" Property="classroom => classroom.UpdatedAt" Sortable="true" />
+    <TemplateColumn Title="Ações" />
+
+    <TemplateColumn Context="classroom">
+        <a href="@($"classroom/edit?id={classroom.Id}")"> Editar </a>
+        <a href="@($"classroom/details?id={classroom.Id}")"> Detalhes </a>
+        <a href="@($"classroom/delete?id={classroom.Id}")"> Remover </a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+
+}

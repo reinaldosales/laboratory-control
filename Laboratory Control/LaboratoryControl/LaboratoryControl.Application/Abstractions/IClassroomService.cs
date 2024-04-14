@@ -10,4 +10,6 @@ namespace LaboratoryControl.Application.Abstractions;
 public interface IClassroomService
 {
     Task<IEnumerable<Classroom>> GetAll();
+    Task<Classroom> Add(Classroom classroom);
+    IQueryable<Classroom> GetAllToIndex();
 }

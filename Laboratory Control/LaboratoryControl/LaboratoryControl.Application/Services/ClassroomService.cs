@@ -18,6 +18,14 @@ public class ClassroomService : IClassroomService
         _classroomRepository = classroomRepository;
     }
 
+    public async Task<Classroom> Add(Classroom classroom)
+        => await _classroomRepository.Save(classroom);
+
     public async Task<IEnumerable<Classroom>> GetAll()
         => await _classroomRepository.GetAll();
+
+    public IQueryable<Classroom> GetAllToIndex()
+    {
+        return _classroomRepository.GetAllToIndex();
+    }
 }

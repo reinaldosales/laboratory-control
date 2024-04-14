@@ -1,9 +1,4 @@
 ﻿using LaboratoryControl.Domain.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LaboratoryControl.Domain.Entities;
 
@@ -19,5 +14,13 @@ public class Classroom : EntityBase
         Name = name;
     }
 
-    public required string Name { get;  set; }
+    public Classroom(DateTime createdAt,
+        DateTime updatedAt,
+        DateTime? deletedAt,
+        string name) : base(createdAt, updatedAt, deletedAt)
+    {
+        Name = name;
+    }
+
+    public string Name { get;  set; }
 }

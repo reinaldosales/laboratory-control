@@ -23,14 +23,28 @@ namespace LaboratoryControl.Infra.Data.Repositories
             .AsNoTracking()
             .ToListAsync();
 
+        public IQueryable<Classroom> GetAllToIndex()
+        {
+            return _context.Classrooms;
+        }
+
         public Task<Classroom?> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Classroom> Save(Classroom classroom)
+        public async Task<Classroom> Save(Classroom classroom)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Classrooms.Add(classroom);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return classroom;
         }
 
         public Task Update(Classroom classroom)

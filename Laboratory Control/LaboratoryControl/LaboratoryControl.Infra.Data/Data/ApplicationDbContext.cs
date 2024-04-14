@@ -4,8 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LaboratoryControl.Infra.Data;
 
-public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    { }
+
     public DbSet<Classroom>? Classrooms { get; set; }
     public DbSet<RoomScheduling>? RoomScheduling { get; set; }
 }
